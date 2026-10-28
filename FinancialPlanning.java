@@ -28,14 +28,19 @@ public class FinancialPlanning{
             cost[i] = Long.parseLong(st.nextToken());
 
 
-            System.out.println("profit: " + profit[i] + " cost: " + cost[i]);
+            //System.out.println("profit: " + profit[i] + " cost: " + cost[i]);
         }
 
-        int low = 1;
-        int high = Integer.MAX_VALUE;
+        long low = 1;
+        long high = 2_000_000_000;
         while(low < high){
-            int mid = (high + low) / 2;
-            //if what
+            long mid = (high + low) / 2;
+            //if
+            if(isHighEnough(mid)) high = mid;
+            else{
+                low = mid + 1;
+            }
+
             low = mid + 1;
         }
 
@@ -43,12 +48,12 @@ public class FinancialPlanning{
 
     }
 
-    boolean isHighEnough(int days){
-        int total = 0;
+    static boolean isHighEnough(long days){
+        long total = 0;
         for(int i = 0; i < n; i++){
-            int gain = profit[i] * days - cost[i];
+            long gain = profit[i] * days - cost[i];
             if(gain > 0){
-                total *= gain;
+                total += gain;
                 if(total > target) return true;
             }
         }
