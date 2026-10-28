@@ -5,7 +5,7 @@ public class GuessTheNumber{
 
         Scanner sc = new Scanner(System.in);
 
-        int low = 0;
+        int low = 1;
         int high = 1000;
 
         System.out.println(500);
@@ -17,19 +17,18 @@ public class GuessTheNumber{
 
             String line = sc.nextLine();
 
-            if(numGuesses >= 10) return;
+            if(numGuesses > 10) return;
 
             int middle = (high + low) / 2;
 
             if(line.equals("correct")){
-                System.out.println(middle);
                 return;
             }
             else if(line.equals("lower")){
-                high = middle - 1;
+                high = middle;
             }
-            else{
-                low = middle + 1;
+            else if(line.equals("higher")){
+                low = middle;
             }
 
             System.out.println(middle);
