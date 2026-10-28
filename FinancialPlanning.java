@@ -14,8 +14,6 @@ public class FinancialPlanning{
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-
-
         StringTokenizer st = new StringTokenizer(br.readLine());
         n = Integer.parseInt(st.nextToken());
         target = Long.parseLong(st.nextToken());
@@ -40,8 +38,6 @@ public class FinancialPlanning{
             else{
                 low = mid + 1;
             }
-
-            low = mid + 1;
         }
 
         System.out.println(low);
@@ -54,7 +50,7 @@ public class FinancialPlanning{
             long gain = profit[i] * days - cost[i];
             if(gain > 0){
                 total += gain;
-                if(total > target) return true;
+                if(total >= target) return true;
             }
         }
         return false;
