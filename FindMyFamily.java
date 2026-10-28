@@ -1,19 +1,33 @@
+import java.util.*;
+
 public class FindMyFamily{
     public static void main(String[] args){
 
         //monotonic stack skeleton
 
-        for(int i = n - 1; i >= 0; i--){
-            while(!stack.isEmpty() && val >= stack.peek()){
-                stack.pop();
-            }
+        Scanner sc = new Scanner(System.in);
 
-            if(stack.isEmpty()) ans = -1;
-            else{
-                ans = stack.peek();
-            }
+        int numPhotos = Integer.parseInt(sc.nextLine());
+        int index = 0;
 
-            stack.push(current);
+        while(index < numPhotos){
+            System.out.println("ENTER");
+
+            int numPeople = sc.nextInt();
+
+            int counter = 0;
+            while(counter < numPeople){
+
+                int val = sc.nextInt();
+                System.out.println(val);
+                counter++;
+            }
+            
+            index++;
         }
+
+
+
+        sc.close();
     }
 }
