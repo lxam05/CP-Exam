@@ -14,7 +14,7 @@ public class Fridge{
         for(int i = 0; i < in.length; i++){
 
             int val = in[i] - '0';
-            System.out.print(val + " ");
+            //System.out.print(val + " ");
 
             if(map.containsKey(val)){
 
@@ -29,7 +29,17 @@ public class Fridge{
         }
 
         for(int id : map.keySet()){
-            System.out.println(id);
+            //System.out.println(id);
+        }
+
+        for(int i = 1; i < 1000; i++){
+
+            //some way of splitting
+
+            if(!map.containsKey(i)){
+                System.out.println(i);
+                return;
+            }
         }
     }
 }
