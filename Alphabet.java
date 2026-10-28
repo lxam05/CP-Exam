@@ -13,12 +13,14 @@ public class Alphabet{
 
         int max = 0;
 
+
+
         //find the longest increasing substring of characters in the string then - that number from 26
         for(int i = 0; i < alphabet.length(); i++){
             int num = 1;
             char firstChar = alphabet.charAt(i);
 
-            for(int j = i; j < alphabet.length(); j++){
+            for(int j = i + 1; j < alphabet.length(); j++){
 
                 if(firstChar < alphabet.charAt(j)){
                     num++;
@@ -26,10 +28,11 @@ public class Alphabet{
                 }
             }
             max = Math.max(max, num);
-            System.out.println(num);
+            // System.out.println(num);
         }
 
-        //System.out.println(len - max);
+
+        System.out.println(len - max);
 
         sc.close();
 
