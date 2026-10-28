@@ -8,10 +8,13 @@ public class GuessTheNumber{
         int low = 0;
         int high = 1000;
 
-        int numGuesses = 0;
+        System.out.println(500);
+        System.out.flush();
+
+        int numGuesses = 1;
 
         while(sc.hasNextLine()){
-            sc.nextLine();
+
             String line = sc.nextLine();
 
             if(numGuesses >= 10) return;
@@ -20,7 +23,6 @@ public class GuessTheNumber{
 
             if(line.equals("correct")){
                 System.out.println(middle);
-                
                 return;
             }
             else if(line.equals("lower")){
@@ -30,6 +32,9 @@ public class GuessTheNumber{
                 low = middle + 1;
             }
 
+            System.out.println(middle);
+            System.out.flush();
+            
             numGuesses++;
         }
 
