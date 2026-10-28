@@ -21,7 +21,7 @@ public class FinancialPlanning{
         cost = new long[n];
         for(int i = 0; i < n; i++){
             st = new StringTokenizer(br.readLine());
-            System.out.println(st.toString());
+            System.out.println(st.nextToken());
         }
     }
 }
