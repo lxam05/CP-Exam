@@ -12,23 +12,27 @@ public class GuessTheNumber{
 
         while(sc.hasNextLine()){
             sc.nextLine();
-            System.out.println(sc);
+            String line = sc.nextLine();
 
-            while(numGuesses < 10 && low < high){
+            if(numGuesses >= 10) return;
 
-                int middle = (high + low) / 2;
-                if(){
-                }
-                //input = lower
-                else if(){
-                    high = middle - 1;
-                }
-                else{
-                    low = middle  + 1;
-                }
+            int middle = (high + low) / 2;
+
+            if(line.equals("correct")){
+                System.out.println(middle);
                 
-                numGuesses++;
+                return;
             }
+            else if(line.equals("lower")){
+                high = middle - 1;
+            }
+            else{
+                low = middle + 1;
+            }
+
+            numGuesses++;
         }
+
+        sc.close();
     }
 }
