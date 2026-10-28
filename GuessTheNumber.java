@@ -13,7 +13,7 @@ public class GuessTheNumber{
 
         int numGuesses = 1;
 
-        while(sc.hasNextLine()){
+        while(numGuesses <= 10){
 
             String line = sc.nextLine();
 
@@ -34,7 +34,7 @@ public class GuessTheNumber{
 
             System.out.println(middle);
             System.out.flush();
-            
+
             numGuesses++;
         }
 
