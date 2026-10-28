@@ -17,6 +17,11 @@ public class FinancialPlanning{
         n = Integer.parseInt(st.nextToken());
         target = Long.parseLong(st.nextToken());
 
-        System.out.println(n);
+        profit = new long[n];
+        cost = new long[n];
+        for(int i = 0; i < n; i++){
+            st = new StringTokenizer(br.readLine());
+            System.out.println(st.toString());
+        }
     }
 }
