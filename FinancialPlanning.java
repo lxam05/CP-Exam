@@ -21,7 +21,25 @@ public class FinancialPlanning{
         cost = new long[n];
         for(int i = 0; i < n; i++){
             st = new StringTokenizer(br.readLine());
-            System.out.println(st.nextToken());
+            profit[i] = Long.parseLong(st.nextToken());
+            cost[i] = Long.parseLong(st.nextToken());
+
+
+            System.out.println("profit: " + profit[i] + " cost: " + cost[i]);
         }
+
+        int low = 1;
+        int high = Integer.MAX_VALUE;
+        while(low < high){
+            int mid = (high + low) / 2;
+            //if what
+            if(){
+                high = mid;
+            }
+            else{
+                low = mid + 1;
+            }
+        }
+
     }
 }
