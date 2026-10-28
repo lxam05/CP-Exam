@@ -34,7 +34,7 @@ public class FindMyFamily{
                     if(list.get(j) < current){
                         current = list.get(j);
                         for(int k = j + 1; k < list.size(); k++){
-                            if(list.get(k) > current){
+                            if(list.get(k) > current && list.get(k) > list.get(i)){
                                 set.add(i + 1);
                             }
                         }
