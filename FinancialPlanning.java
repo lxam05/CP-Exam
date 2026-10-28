@@ -4,14 +4,17 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class FinancialPlanning{
+
+    static int n;
+    static long target;
+    static long[] profit;
+    static long[] cost;
+
     public static void main(String[] args) throws IOException{
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int n;
-        long target;
-        long[] profit;
-        long[] cost;
+
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         n = Integer.parseInt(st.nextToken());
@@ -33,13 +36,22 @@ public class FinancialPlanning{
         while(low < high){
             int mid = (high + low) / 2;
             //if what
-            if(){
-                high = mid;
-            }
-            else{
-                low = mid + 1;
-            }
+            low = mid + 1;
         }
 
+        System.out.println(low);
+
+    }
+
+    boolean isHighEnough(int days){
+        int total = 0;
+        for(int i = 0; i < n; i++){
+            int gain = profit[i] * days - cost[i];
+            if(gain > 0){
+                total *= gain;
+                if(total > target) return true;
+            }
+        }
+        return false;
     }
 }
