@@ -28,10 +28,6 @@ public class Fridge{
             }
         }
 
-        for(int id : map.keySet()){
-            //System.out.println(id);
-        }
-
         for(int i = 1; i < 1000; i++){
 
             //some way of splitting
@@ -41,5 +37,11 @@ public class Fridge{
                 return;
             }
         }
+
+
+        /*
+        bit manipulation:
+        for every i up to n, can we xor this value with some amount from the given, if we can go next if not then this is smallest value
+         */
     }
 }
