@@ -13,7 +13,7 @@ public class Alphabet{
 
         int max = 0;
 
-
+        int[] dp = new int[alphabet.length()];
 
         //find the longest increasing substring of characters in the string then - that number from 26
         for(int i = 0; i < alphabet.length(); i++){
