@@ -17,7 +17,7 @@ public class GuessTheNumber{
 
             String line = sc.nextLine();
 
-            if(numGuesses > 10) return;
+            
 
             int middle = (high + low) / 2;
 
@@ -35,6 +35,10 @@ public class GuessTheNumber{
             System.out.flush();
 
             numGuesses++;
+        }
+
+        if(numGuesses >= 10){
+            return;
         }
 
         sc.close();
